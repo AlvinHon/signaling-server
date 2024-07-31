@@ -23,13 +23,13 @@ The error response is with status code 400, where the body is the error message 
 
 |Method|Request Body|Response Body|Note|
 |:---|:---|:---|:---|
-|`create_data_channel`|<pre>{ "method":"create_data_channel" }</pre>|<pre>{ "channel_id": channel_id }</pre>|The UUID `channel_id` is created by the server. A record with `channel_id` as a key will be created in the [DB](#dynamodb) with TTL = 300s.|
-|`create_offer`|<pre>{ "method": "create_offer","channel_id": channel_id, "offer": offer }</pre>|-|Error response if `channel_id` has not been created before.|
-|`get_offer`|<pre>{ "method": "get_offer", "channel_id": channel_id }</pre>|<pre>{ "offer": offer }</pre>|Error response if `channel_id` or offer has not been created before.|
-|`create_candidate`|<pre>{ "method": "create_candidate", "channel_id": channel_id, "candidate": candidate }</pre>|-|The value `candidate` will be appended to the list in DB if the list does not contain it. Error response if `channel_id` has not been created before.|
-|`create_answer`|<pre>{ "method": "create_answer", "channel_id": channel_id, "answer": answer }</pre>|-|Error response if an answer has already been created, or the `channel_id` has not been created before.|
-|`get_candidates`|<pre>{ "method": "get_candidates", "channel_id": channel_id }</pre>|<pre>{ "items": [candidate, ...] }</pre>|Error response if `channel_id` has not been created before.|
-|`get_answer`|<pre>{ "method": "get_answer", "channel_id": channel_id }</pre>|<pre>{ "answer": answer }</pre>|Error response if `channel_id` or answer has not been created before.|
+|`create_data_channel`|<pre>{<br>  "method": "create_data_channel"<br>}</pre>|<pre>{<br>  "channel_id": channel_id<br>}</pre>|The UUID `channel_id` is created by the server. A record with `channel_id` as a key will be created in the [DB](#dynamodb) with TTL = 300s.|
+|`create_offer`|<pre>{<br>  "method": "create_offer",<br>  "channel_id": channel_id,<br>  "offer": offer<br>}</pre>|-|Error response if `channel_id` has not been created before.|
+|`get_offer`|<pre>{<br>  "method": "get_offer",<br>  "channel_id": channel_id<br>}</pre>|<pre>{<br>  "offer": offer<br>}</pre>|Error response if `channel_id` or offer has not been created before.|
+|`create_candidate`|<pre>{<br>  "method": "create_candidate",<br>  "channel_id": channel_id,<br>  "candidate": candidate<br>}</pre>|-|The value `candidate` will be appended to the list in DB if the list does not contain it. Error response if `channel_id` has not been created before.|
+|`create_answer`|<pre>{<br>  "method": "create_answer",<br>  "channel_id": channel_id,<br>  "answer": answer<br>}</pre>|-|Error response if an answer has already been created, or the `channel_id` has not been created before.|
+|`get_candidates`|<pre>{<br>  "method": "get_candidates",<br>  "channel_id": channel_id<br>}</pre>|<pre>{<br>  "items": [candidate, ...]<br>}</pre>|Error response if `channel_id` has not been created before.|
+|`get_answer`|<pre>{<br>  "method": "get_answer",<br>  "channel_id": channel_id<br>}</pre>|<pre>{<br>  "answer": answer<br>}</pre>|Error response if `channel_id` or answer has not been created before.|
 
 ## DynamoDB
 
