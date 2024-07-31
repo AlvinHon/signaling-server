@@ -13,3 +13,5 @@ Signaling Server-->Client A: B's ICE Candidates
 note over Client A: Accept answer
 Client A-->Client B: Data Channel Connected
 ```
+
+**remind to add style with white background in the svg element**

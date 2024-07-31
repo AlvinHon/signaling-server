@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="575" height="587" xmlns:xlink="http://www.w3.org/1999/xlink"><source><![CDATA[Client A->Signaling Server: Create Offer
+<?xml version="1.0" encoding="utf-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd"><svg xmlns="http://www.w3.org/2000/svg" width="575" height="587" style="background: white;" xmlns:xlink="http://www.w3.org/1999/xlink"><source><![CDATA[Client A->Signaling Server: Create Offer
 Client A-->Signaling Server: A's ICE Candidates
 Signaling Server->Client B: Get Offer
 note over Client B: Accept offer
